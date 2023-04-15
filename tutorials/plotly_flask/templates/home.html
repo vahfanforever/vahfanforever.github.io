@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 
 <head>
@@ -60,5 +60,53 @@
     </div>
 </body>
 
+
+</html> -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Line Chart</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<body>
+    <div id="chart"></div>
+    <table {{ table._attrs }}>
+        <thead>
+            <tr>
+                {% for col in table.columns %}
+                <th {{ col._th_html_attrs }}>
+                    {{ col.th_content() }}
+                </th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in table._rows %}
+            <tr {{ row._tr_html_attrs }}>
+                {% for cell in row %}
+                <td {{ cell._td_html_attrs }}>
+                    {{ cell.td_contents() }}
+                </td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <script>
+        var data = [{
+            x: [{% for row in table._rows %}
+                "{{ row.x }}"{% if not loop.last %}, {% endif %}
+        {% endfor %}}],
+        y: [{% for row in table._rows %}
+        "{{ row.y }}"{% if not loop.last %}, {% endif %}
+        {% endfor %}}]
+        }];
+
+        Plotly.newPlot('chart', data);
+    </script>
+</body>
 
 </html>
