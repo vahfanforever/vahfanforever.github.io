@@ -24,6 +24,8 @@ def home():
     # create the figure
     fig = go.Figure(data=data, layout=layout)
 
+    fig.update_layout(plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)")
+
     # export the figure to HTML
     plot_div = pio.to_html(fig, full_html=False)
 
