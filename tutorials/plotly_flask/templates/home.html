@@ -19,7 +19,7 @@
             width: 100%;
             max-width: 800px;
             height: auto;
-            margin: 1rem auto;
+            margin: -10rem auto 1rem;
         }
 
         h1 {
@@ -32,8 +32,15 @@
         h2 {
             font-family: 'Inconsolata', monospace;
             font-size: 2.5rem;
+            /* color: #fff; */
+            margin: -1rem 0 2rem;
+        }
+
+        h3 {
+            font-family: 'Inconsolata', monospace;
+            font-size: 2.5rem;
             color: #fff;
-            margin: 3rem 0 2rem;
+            margin: -1rem 0 2rem;
         }
 
         p {
@@ -72,16 +79,17 @@
 <body>
     <h1>O.J Berry</h1>
     <h2>2023 season statistics</h2>
+    <h3>{{ ppg }} PPG | {{ppg}} FG% | {{ppg}} APG | {{ppg}} RPG </h3>
+
 
     <img src="static/v1_3.png" alt="Image">
 
-    <p style="font-size: 2rem; font-weight: bold; text-align: center; margin: 2rem 0;">
-        Yup. She is currently averaging {{ ppg }} points per game. <br> Have a look at her points scored
-        over the last {{ games }} games. </p>
+    <p style="font-size: 2rem; font-weight: bold; text-align: center; margin: 2rem 0;margin-left: -1100px;">
+        Points per game </p>
 
 
     <div class="container">
-        <div style="width: 800px; margin-left: 10px;">
+        <div style="width: 800px; margin-left: -500px;">
             <div class="plot">
                 {{ plot_div|safe }}
             </div>

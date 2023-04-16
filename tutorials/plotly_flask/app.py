@@ -18,10 +18,10 @@ def home():
         x="date",
         y="points",
         color="type",
-        height=400,
+        height=500,
     )
     fig.update_layout(plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)")
-
+    fig.update_layout(margin=dict(l=1))
     plot_div = pio.to_html(fig, full_html=False)
 
     return render_template("home.html", plot_div=plot_div, ppg=12, games=12)
