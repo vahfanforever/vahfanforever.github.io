@@ -1,0 +1,70 @@
+body {
+    /* background: radial-gradient(circle, #5cb85c, #ffffff); */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1vw;
+}
+
+h1 {
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-family: 'Inconsolata', monospace;
+    text-align: left;
+    font-size: 4vw;
+    position: absolute;
+    left: 30px;
+    /* adjust the value as needed */
+    top: 200px;
+    /* adjust the value as needed */
+}
+
+
+h2 {
+    font-family: 'Inconsolata', monospace;
+    text-align: left;
+    font-size: 2vw;
+    position: absolute;
+    left: 50px;
+    /* adjust the value as needed */
+    top: 300px;
+    /* adjust the value as needed */
+}
+
+h3 {
+    font-family: 'Inconsolata', monospace;
+    text-align: left;
+    font-size: 2vw;
+    position: absolute;
+    left: 100px;
+    /* adjust the value as needed */
+    top: 550px;
+    /* adjust the value as needed */
+}
+
+
+
+.video-bg {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-10%, -50%) scale(0.8);
+}
+
+.slide-in {
+    position: relative;
+    top: 600px;
+    /* left: 300px; */
+    /* adjust this value to control the amount of horizontal offset */
+    transition: left 1s ease;
+}
+
+.slide-in.active {
+    left: -500px;
+}
