@@ -1,0 +1,79 @@
+body {
+    /* background: radial-gradient(circle, #5cb85c, #ffffff); */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1vw;
+}
+
+h1 {
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-family: 'Inconsolata', monospace;
+    text-align: left;
+    font-size: 4vw;
+    position: absolute;
+    left: 30px;
+    /* adjust the value as needed */
+    top: 200px;
+    /* adjust the value as needed */
+}
+
+
+h2 {
+    color: white;
+    font-family: 'Inconsolata', monospace;
+    text-align: left;
+    font-size: 2vw;
+    position: absolute;
+    left: 30px;
+    /* adjust the value as needed */
+    top: 300px;
+    /* adjust the value as needed */
+}
+
+.cursor {
+    animation: blink 1s infinite;
+  }
+  
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+
+.video-bg {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+.slide-in {
+    position: relative;
+    top: 325px;
+    /* adjust this value to control the amount of horizontal offset */
+    transition: left 1s ease;
+}
+
+.slide-in.active {
+    left: -590px;
+}
+
+img:hover {
+  cursor: pointer;
+}
