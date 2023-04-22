@@ -24,22 +24,41 @@ h1 {
 
 
 h2 {
+    color: white;
     font-family: 'Inconsolata', monospace;
     text-align: left;
     font-size: 2vw;
     position: absolute;
-    left: 50px;
+    left: 30px;
     /* adjust the value as needed */
     top: 300px;
     /* adjust the value as needed */
 }
+
+.cursor {
+    animation: blink 1s infinite;
+  }
+  
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
 
 h3 {
     font-family: 'Inconsolata', monospace;
     text-align: left;
     font-size: 2vw;
     position: absolute;
-    left: 100px;
+    color: white;
+    left: 30px;
     /* adjust the value as needed */
     top: 550px;
     /* adjust the value as needed */
@@ -48,23 +67,23 @@ h3 {
 
 
 .video-bg {
-    width: 50%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-10%, -50%) scale(0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
+
 
 .slide-in {
     position: relative;
-    top: 600px;
-    /* left: 300px; */
+    top: 325px;
     /* adjust this value to control the amount of horizontal offset */
     transition: left 1s ease;
 }
 
 .slide-in.active {
-    left: -500px;
+    left: -590px;
 }
