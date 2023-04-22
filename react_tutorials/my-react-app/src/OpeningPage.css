@@ -73,3 +73,7 @@ h2 {
 .slide-in.active {
     left: -590px;
 }
+
+img:hover {
+  cursor: pointer;
+}

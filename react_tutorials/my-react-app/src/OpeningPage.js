@@ -27,7 +27,7 @@ class OpeningPage extends React.Component {
               <h2>18 PPG | 3 APG | 41.94 FG%
               <span className="cursor">|</span>
               </h2>
-              <img src={myImage} alt="Olivia" className="slide-in" onClick={this.handleImageClick} />
+              <img src={myImage} alt="Olivia" className="slide-in" onClick={this.handleImageClick}  style={{ cursor: 'pointer' }}/>
               <video className="video-bg" src={myVideo} autoPlay muted loop />
           </div>
       );
