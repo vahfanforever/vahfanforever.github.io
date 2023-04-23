@@ -13,7 +13,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "build": "set \"PUBLIC_URL=/website\" && set \"REACT_APP_HASH=%random%\" && react-scripts build",    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "start": "react-scripts start",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
