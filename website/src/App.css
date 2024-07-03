@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Hide any overflow content */
+}
+
+.background-image {
+  width: 100%; /* Image width to fill the container */
+  height: 100%; /* Image height to fill the container */
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+  position: absolute; /* Position the image absolutely within the container */
+  top: 0;
+  left: 0;
+  filter: grayscale(100%);
+
+}
