@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
+import frontpageImage from './assets/images/frontpage.png';
 
 function App() {
   return (
     <div className="app">
-      <img src="./website/frontpage.png" alt="Background" className="background-image" />
+      <img src={frontpageImage} alt="Background" className="background-image" />
     </div>
   );
 }
