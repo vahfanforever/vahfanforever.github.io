@@ -32,27 +32,28 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
 .app {
+  /* Remove width/height constraints and overflow: hidden */
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100vw; /* Full viewport width */
-  height: 100vh; /* Full viewport height */
-  overflow: hidden; /* Hide any overflow content */
+  position: relative;
+  /* Add this to maintain positioning context */
 }
 
 .background-image {
-  width: 100%; /* Image width to fill the container */
-  height: 100%; /* Image height to fill the container */
-  object-fit: cover; /* Maintain aspect ratio and cover the container */
-  position: absolute; /* Position the image absolutely within the container */
-  top: 0;
-  left: 0;
+  width: 100%;
+  height: auto;
+  /* Change this from 100% to auto to maintain image aspect ratio */
+  object-fit: contain;
+  /* Change from cover to contain if you want to show the full image */
+  position: relative;
+  /* Change from absolute to relative to allow normal document flow */
   filter: grayscale(100%);
-
 }
